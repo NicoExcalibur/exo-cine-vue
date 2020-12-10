@@ -17,7 +17,8 @@ export default {
     },
     props: {
         prenom: {
-            type : String
+            type : String,
+            required: true
         }
     }
 
