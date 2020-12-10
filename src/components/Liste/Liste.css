@@ -3,6 +3,8 @@ p {
 }
 
 .liste {
-    color: lime;
-    border: solid 2px blue;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    border: solid 1px lightblue;
 }
