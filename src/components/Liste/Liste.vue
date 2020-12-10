@@ -15,7 +15,12 @@ export default {
             films: ['Inception', 'Avatar', 'Seven']
         }
     },
-    props: ['prenom']
+    props: {
+        prenom: {
+            type : String
+        }
+    }
+
 }
 </script>
 
