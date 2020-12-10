@@ -1,16 +1,24 @@
 <template>
     <div>
-        {{ txt }}
+        <p>{{ txt }}</p>
+        <liste v-bind:prenom="prenom"></liste>
     </div>
 </template>
 
 <script>
 
+import Liste from './Liste/Liste.vue'
+
 export default {
+    name: 'Contenu',
     data(){
         return {
-            txt: 'je suis le contenu'
+            txt: 'oskour',
+            prenom: 'Nico'
         }
+    },
+    components: {
+        'liste': Liste
     }
 }
 
