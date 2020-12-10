@@ -19,6 +19,9 @@
         <div v-on:click="delTxt" class="btn btn-danger mt-3 ml-2">
             Supprime le txt
         </div>
+        <div v-on:click="changeTitre" class="btn btn-danger mt-3 ml-2">
+            Modifie le titre
+        </div>
 
     </div>
 </template>
@@ -37,6 +40,9 @@ export default {
         },
         delTxt: function(){
             this.txt = ""
+        },
+        changeTitre: function(){
+            this.$emit('changeTitre', 'Nouveau titre')
         }
     },
     props: ['myArr', 'txt']

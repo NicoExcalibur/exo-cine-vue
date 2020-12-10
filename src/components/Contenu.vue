@@ -1,7 +1,9 @@
 <template>
     <div class="container mt-5">
-        <liste v-bind:myArr="myArr" :txt="txt"></liste>
-        <liste v-bind:myArr="myArr" :txt="txt"></liste>
+
+        <h1> {{ titre }} </h1>
+
+        <liste v-bind:myArr="myArr" :txt="txt" v-on:changeTitre="changementTitre($event)"></liste>
     </div>
 </template>
 
@@ -18,7 +20,13 @@ export default {
                 {titre: 'Avatar', date: 2009},
                 {titre: 'Seven', date: 1995}
             ],
-        txt: 'Hello !'
+        txt: 'Hello !',
+        titre: 'Je suis le titre'
+        }
+    },
+    methods: {
+        changementTitre: function(nvTitre){
+            this.titre = nvTitre;
         }
     },
     components: {
